@@ -1,7 +1,0 @@
-@import url('../__card/__text.css');
-@import url('../__card/__image.css');
-
-.technology__card {
-    display: flex;
-    flex-direction: column;
-}

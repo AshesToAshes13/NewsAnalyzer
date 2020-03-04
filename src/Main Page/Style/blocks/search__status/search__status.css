@@ -1,8 +1,0 @@
-@import url('../search__status/-searching/-searching.css');
-@import url('../search__status/-nothing/-nothing.css');
-@import url('../search__status/-error/-error.css');
-@import url('../search__status/-success/-succes.css');
-
-.search__status {
-    background: #f5f6f7;
-}
