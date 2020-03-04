@@ -1,4 +1,4 @@
-# NewsAnalyzer
+# NewsAnalyze
 ## ver. 0.7.0
 [Рабочая версия](https://ashestoashes13.github.io/NewsAnalyzer)
 # Иструкция по развертке проекта
