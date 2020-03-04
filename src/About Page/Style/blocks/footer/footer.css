@@ -1,0 +1,28 @@
+@import url('../footer/__copyright.css');
+@import url('../footer/__links.css');
+@import url('../footer/__link.css');
+@import url('../footer/__link-social.css');
+@import url('../footer/__text.css');
+
+.footer {
+    padding-top: 30px;
+    padding-right: 104px;
+    padding-left: 104px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .footer {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}

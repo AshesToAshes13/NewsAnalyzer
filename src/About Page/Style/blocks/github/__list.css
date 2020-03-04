@@ -1,0 +1,8 @@
+@import url('../github/__commit/__commit.css');
+
+.github__list {
+    display: flex;
+    flex-direction: row;
+    /*width: 1232px;
+    margin: 0 auto;*/
+}

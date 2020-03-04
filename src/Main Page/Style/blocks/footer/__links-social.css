@@ -1,0 +1,16 @@
+.footer__links-social {
+    display: flex;
+    padding-right: 104px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .footer__links-social {
+        padding-right: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .footer__links-social {
+        padding-right: 40px;
+    }
+}

@@ -1,0 +1,17 @@
+@import url('../-searching/__preloader.css');
+@import url('../-searching/__title.css');
+
+.search__status-searching {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) { 
+    .search__status-searching {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}

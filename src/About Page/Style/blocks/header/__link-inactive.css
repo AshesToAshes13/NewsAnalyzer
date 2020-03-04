@@ -1,0 +1,28 @@
+.header__link-inactive {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #B6BCBF;
+    text-decoration: none;
+    margin: 0;
+    padding-right: 34px;
+    padding-top: 30px;
+    padding-bottom: 26px;
+    transition: 0.4s ease-in-out;
+}
+
+.header__link-inactive:hover {
+    color: #1A1B22;;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .header__link-inactive {
+        font-size: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-right: 11px;
+    }
+}

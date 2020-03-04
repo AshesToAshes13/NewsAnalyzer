@@ -1,0 +1,19 @@
+@import url('../-error/__image.css');
+@import url('../-error/__titel.css');
+@import url('../-error/__subtite.css');
+
+.search__status-error {
+    display: flex;
+    flex-direction: column;
+    max-width: 356px;
+    padding-top: 86px;
+    padding-bottom: 80px;
+    margin: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .search__status-error {
+        padding-top: 43px;
+        padding-bottom: 40px;
+    }
+}

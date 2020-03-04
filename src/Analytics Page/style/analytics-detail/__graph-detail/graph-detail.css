@@ -1,0 +1,14 @@
+@import url('../__graph-detail/__lines.css');
+@import url('../__graph-detail/__line.css');
+@import url('../__graph-detail/__date.css');
+@import url('../__graph-detail/__bar.css');
+@import url('../__graph-detail/__conter.css');
+@import url('../__graph-detail/__numbers.css');
+@import url('../__graph-detail/__number.css');
+
+.analytics-detail__graph-detail {
+    margin: 0;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+}

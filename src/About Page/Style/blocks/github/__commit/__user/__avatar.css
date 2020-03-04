@@ -1,0 +1,6 @@
+.user__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 1000px;
+    padding-right: 16px;
+}
