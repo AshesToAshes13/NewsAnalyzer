@@ -1,0 +1,21 @@
+.graph-detail__numbers {
+    display: flex;
+    flex-direction: row;
+    padding-top: 16px;
+    padding-left: 104px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .graph-detail__numbers {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .graph-detail__numbers {
+        padding-left: 77px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

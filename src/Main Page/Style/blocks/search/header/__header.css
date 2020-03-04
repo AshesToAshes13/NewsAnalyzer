@@ -1,0 +1,8 @@
+@import url('../header/__title.css');
+@import url('../header/__links/__links.css');
+.search__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+}

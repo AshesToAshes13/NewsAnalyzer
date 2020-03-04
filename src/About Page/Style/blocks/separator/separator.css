@@ -1,0 +1,11 @@
+.separator {
+    height: 1px;
+    background-color: #B6BCBF;
+    margin-top: -5px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .separator {
+        margin-top: -3px;
+    }
+}

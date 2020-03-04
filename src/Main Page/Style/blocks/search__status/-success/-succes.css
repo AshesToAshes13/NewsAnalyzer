@@ -1,0 +1,25 @@
+@import url('../-success/__text/__text.css');
+@import url('../-success/__cards.css');
+@import url('../-success/__button.css');
+
+.search__status-success {
+    width: 1232px;
+    margin: auto;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .search__status-success {
+        width: 288px;
+        padding-top: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .search__status-success {
+        width: 688px;
+        padding-top: 40px;
+    }
+}

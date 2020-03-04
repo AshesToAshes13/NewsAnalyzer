@@ -1,0 +1,11 @@
+@import url('../__user/__avatar.css');
+@import url('../__user/__data.css');
+@import url('../__user/__name.css');
+@import url('../__user/__email.css');
+
+.commit__user {
+    display: flex;
+    flex-direction: row;
+    padding-top: 24px;
+    padding-left: 24px;
+} 

@@ -1,0 +1,19 @@
+@import url('../-nothing/__image.css');
+@import url('../-nothing/__title.css');
+@import url('../-nothing/__subtitle.css');
+
+.search__status-nothing {
+    display: flex;
+    flex-direction: column;
+    max-width: 356px;
+    padding-top: 86px;
+    padding-bottom: 80px;
+    margin: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .search__status-nothing {
+        padding-top: 43px;
+        padding-bottom: 40px;
+    }
+}

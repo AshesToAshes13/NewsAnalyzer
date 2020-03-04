@@ -1,0 +1,17 @@
+@import url('../__commit/__date.css');
+@import url('../__commit/__user/__user.css');
+@import url('../__commit/__coment.css');
+
+.github__commit {
+    width: 400px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 288px;
+}
+
+.github__commit:last-of-type {
+    margin-right: 0px;
+}
