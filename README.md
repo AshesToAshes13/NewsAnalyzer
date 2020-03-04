@@ -6,7 +6,7 @@
 * В папке вызвать git init
 * Добавить ссылку на репозиторий git remote add origin git@github.com/AshesToAshes13/NewsAnalyzer
 * Выполнить git pull
-* Установить плагины вызовом команды nmp -i "название плагина" --save-dev
+* Установить плагины вызовом команды npm -i "название плагина" --save-dev
 * Собрать проект командой npm run build
 * Запустить проект командой npm run dev
 # Плагины 
