@@ -1,0 +1,28 @@
+@import url('../analytics-detail/__titel.css');
+@import url('../analytics-detail/__graph.css');
+@import url('../analytics-detail/__graph-detail/graph-detail.css');
+
+.analytics-detail {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: 104px;
+    padding-right: 104px;
+    padding-bottom: 80px;
+    background-color: #F5F6F7;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .analytics-detail {
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 38px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+    .analytics-detail {
+        padding: 40px;
+    }
+}

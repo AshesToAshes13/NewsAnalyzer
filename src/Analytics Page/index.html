@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Egor Bamburov">
+        <meta name="description" content="News Analyzer">
+        <link rel="shortcut icon" href="<%=require('../Main Page/Images/icons/analyticsIcon.png').default%>" type="image/x-icon">
+        <title>Аналитика</title>
+        <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+    </head>
+    <body>
+        <div class="page">
+            <section class="header">
+                <h1 class="header__titel">NewsAnalyzer</h1>
+                <div class="header__links">
+                    <a class="header__link" href="index.html" target="_blank">Главная</a>
+                    <a class="header__link" href="about.html" target="_blank">О проекте</a>
+                </div>
+            </section>
+            <section class="separator"></section>
+            <section class="analytics-main">
+                <h2 class="analytics-main__way">Главная <span class="way__span">/ Аналитика</span></h2>
+                <h3 class="analytics-main__request">Вы спросили: <span class="request__span">«Путешествия»</span></h3>
+                <p class="analytics-main__text analytics-main__text-week">Новостей за неделю: <span class="text__span">34 324</span></p>
+                <p class="analytics-main__text analytics-main__text-mentions">Упоминаний в загаловках: <span class="text__span">235</span></p>
+            </section>
+            <section class="analytics-detail">
+                <h2 class="analytics-detail__titel">Аналитика по дням</h2>
+                <div class="analytics-detail__graph">
+                    <div class="analytics-detail__graph-main">
+                        <div class="graph-main__text">
+                            <h2 class="graph-main__date">Дата <hr><span class="date__month">(Август)</span></h2>
+                            <h2 class="graph-main__amount">Кол-во упоминаний</h2>
+                        </div>
+                        <div class="graph-main__separator"></div>
+                        <div class="graph-main__numbers">
+                            <p class="graph-main__number">0</p>
+                            <p class="graph-main__number">25</p>
+                            <p class="graph-main__number">50</p>
+                            <p class="graph-main__number">75</p>
+                            <p class="graph-main__number">100</p>
+                        </div>
+                    </div>
+                    <div class="analytics-detail__graph-detail">
+                        <div class="graph-detail__lines">
+                            <div class="graph-detail__line">
+                                <p class="graph-detail__date" name="monday">19, пн</p>
+                                <div class="graph-detail__bar" id="monday__bar">
+                                    <p class="graph-detail__cunter" id="monday__counter">15</p>
+                                </div>
+                            </div>
+                            <div class="graph-detail__line">
+                                <p class="graph-detail__date" name="tuesday">20, вт</p>
+                                <div class="graph-detail__bar" id="tuesday__bar">
+                                    <p class="graph-detail__cunter" id="tuesday__counter">18</p>
+                                </div>
+                            </div>
+                            <div class="graph-detail__line">
+                                <p class="graph-detail__date" name="wednesday">21, ср</p>
+                                <div class="graph-detail__bar" id="wednesday__bar">
+                                    <p class="graph-detail__cunter" id="wednesday__counter">11</p>
+                                </div>
+                            </div>
+                            <div class="graph-detail__line">
+                                <p class="graph-detail__date" name="thursday">22, чт</p>
+                                <div class="graph-detail__bar" id="thursday__bar">
+                                    <p class="graph-detail__cunter" id="thursday__counter">39</p>
+                                </div>
+                            </div>
+                            <div class="graph-detail__line">
+                                <p class="graph-detail__date" name="friday">23, пт</p>
+                                <div class="graph-detail__bar" id="friday__bar">
+                                    <p class="graph-detail__cunter" id="friday__counter">45</p>
+                                </div>
+                            </div>
+                            <div class="graph-detail__line">
+                                <p class="graph-detail__date" name="saturday">24, сб</p>
+                                <div class="graph-detail__bar" id="saturday__bar">
+                                    <p class="graph-detail__cunter" id="saturday__counter">73</p>
+                                </div>
+                            </div>
+                            <div class="graph-detail__line">
+                                <p class="graph-detail__date" name="sunday">25, вс</p>
+                                <div class="graph-detail__bar" id="sunday__bar">
+                                    <p class="graph-detail__cunter" id="sunday__counter">34</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="graph-detail__numbers">
+                        <div class="graph-detail__number">0</div>
+                        <div class="graph-detail__number">25</div>
+                        <div class="graph-detail__number">50</div>
+                        <div class="graph-detail__number">75</div>
+                        <div class="graph-detail__number">100</div>
+                    </div>
+                </div>
+            </section>
+            <section class="footer">
+                <div class="footer__text">
+                    <p class="footer__copyright">&copy; 2020 Егор Бамбуров</p>
+                    <div class="footer__links">
+                        <a class="footer__link" href="index.html" target="_blank">Главна<hr class="line__separator">я</a>
+                        <a class="footer__link" href="about.html" target="_blank">О <hr class="line__separator">проекте</a>
+                        <a class="footer__link" href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практику<hr class="line__separator">м</a>
+                    </div>
+                </div>
+                <div class="footer__links-social">
+                    <a class="footer__link-social" href="https://github.com/AshesToAshes13/NewsAnalyzer" target="_blank"><img src="<%=require('../Main Page/Images/icons/github.png').default%>" alt=""></a>
+                    <a class="footer__link-social" href="https://ru-ru.facebook.com/" target="_blank"><img src="<%=require('../Main Page/Images/icons/facebook.png').default%>" alt=""></a>
+                </div>
+            </section>
+        </div>
+        <script type="module" src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+    </body>
+</html>

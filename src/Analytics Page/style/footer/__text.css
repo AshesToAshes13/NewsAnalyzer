@@ -1,0 +1,11 @@
+.footer__text {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .footer__text {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

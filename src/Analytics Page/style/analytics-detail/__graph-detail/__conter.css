@@ -1,0 +1,17 @@
+.graph-detail__cunter {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 5.5px;
+    background-color: #2F71E5;
+    width: 50%;
+}
