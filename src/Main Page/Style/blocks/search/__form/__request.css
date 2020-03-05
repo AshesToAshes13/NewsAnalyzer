@@ -4,7 +4,7 @@
     background-color: #ffffff;
     backdrop-filter: blur(8px);
     border-radius: 100px;
-    font-family: Roboto;
+    font-family: Roboto, Arial;
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
@@ -19,6 +19,15 @@
     padding-left: 24px;
     padding-top: 21px;
     padding-bottom: 21px;
+}
+
+.search__request:hover {
+    background-color: #d1d1d1;
+    color: black;
+}
+
+.search__request:active {
+    color: black;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

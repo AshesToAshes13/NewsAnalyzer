@@ -129,16 +129,22 @@ function changeDOM() {
 
 function inputHendler() {
     const request = event.currentTarget.elements.request;
-    if (request.value < 1){
+    if (request.value == 0){
         disabledBtn();
         return false
     } else {
-        searchBtn.removeAttribute('disabled');
+        const field = search.elements.request;
+        field.removeAttribute('style')
     }
 }
 
 function disabledBtn() {
-    searchBtn.setAttribute('disabled', true);    
+    //searchBtn.setAttribute('disabled', true); 
+    
+        const field = search.elements.request;
+        field.setAttribute('style', 'border : 1px solid red')
+        field.placeholder = 'Обязательное поле'
+        field.color = 'red'
 }
 
 function showMore() {
@@ -164,11 +170,19 @@ function generateAnaliticsLink() {
 }
 
 searchForm.addEventListener('submit', (event)=> {
+
+
     event.preventDefault();
-    newsList.id = 0;
-    newsList.innerHTML = '';
-    generateAnaliticsLink();
-    startSearch();
+    const request = event.currentTarget.elements.request;
+    if (request.value == 0) {
+        disabledBtn()
+    } else {
+        newsList.id = 0;
+        newsList.innerHTML = '';
+        generateAnaliticsLink();
+        startSearch();
+    }     
+    
 })
 
 searchForm.addEventListener('input', ()=> {
@@ -178,5 +192,3 @@ searchForm.addEventListener('input', ()=> {
 showMoreBtn.addEventListener('click' , () => {
     showMore();
 })
-
-disabledBtn();
