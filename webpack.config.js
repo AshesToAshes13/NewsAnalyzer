@@ -39,24 +39,30 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
+                    
                         'file-loader?name=./images/[name].[ext]', 
                         {
-                                loader: 'image-webpack-loader',
+                                loader: 'image-webpack-loader?',
                                 options: {
+                                    
                                     
                                 },
                         }
-                ]
+                ],
          },
+         
          {
             test: /\.(woff|woff2|eot|ttf|otf)$/,
-            loader: 'file-loader?name=./vendor/[name].[ext]'
+            loader: 'file-loader?name=./vendor/[name].[ext]',
+            
          },
          
                 
         ]
 
     },
+
+    //[name].
 
     plugins: [
         new HtmlWebpackPlugin({
