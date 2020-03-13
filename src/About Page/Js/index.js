@@ -1,28 +1,12 @@
 import '../Style/style.css'
+import {Api} from './modules/api.js';
+import {CommitsList} from './components/commitsList.js';
+import {CommitCard} from './components/commitCard.js';
+import * as constants from './constants/constnants.js';
 
-$('.github__list').slick({
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    dots: true,
-    centerMode: true,
-    variableWidth: true,
-    arrows: true,
-    responsive: [{
-        breakpoint : 320,
-        settings : {
-            arrows: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-        }
-    },
-    {
-        breakpoint : 768,
-        settings : {
-            slidesToShow: 2,
-            slidesToScroll : 2,
-            dots: true
-        }
-    }
-    ]
-});
+const apiClass = new Api(constants.baseUrl);
+const commitCardClass = new CommitCard(constants.commitsList);
+const commitsListClass = new CommitsList(apiClass, commitCardClass, constants.searching, constants.success, constants.error); 
+
+constants.searching.removeAttribute('style');
+commitsListClass.setUpcommits();

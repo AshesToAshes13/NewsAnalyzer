@@ -3,6 +3,8 @@
 @import url('../style/analytics-main/analytics-main.css');
 @import url('../style/analytics-detail/analytics-detail.css');
 @import url('../style/footer/footer.css');
+@import url('../style/searching/searching.css');
+@import url('../style/error/error.css');
 
 @font-face {
     font-family: 'Roboto Slab';
