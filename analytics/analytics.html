@@ -8,30 +8,30 @@
         <meta name="description" content="News Analyzer">
         <link rel="shortcut icon" href="/NewsAnalyzer/./images/analyticsIcon.png" type="image/x-icon">
         <title>Аналитика</title>
-        <link rel="stylesheet" href="/NewsAnalyzer/./analytics/analytics.2ab38220456236d720b1.css">
+        <link rel="stylesheet" href="/NewsAnalyzer/./analytics/analytics.32d6745ea7919ad104aa.css">
     </head>
     <body>
         <div class="page">
             <section class="header">
                 <h1 class="header__titel">NewsAnalyzer</h1>
                 <div class="header__links">
-                    <a class="header__link" href="index.html" target="_blank">Главная</a>
-                    <a class="header__link" href="about.html" target="_blank">О проекте</a>
+                    <a class="header__link" href="../index.html" target="_blank">Главная</a>
+                    <a class="header__link" href="../about/about.html" target="_blank">О проекте</a>
                 </div>
             </section>
             <section class="separator"></section>
             <section class="analytics-main">
                 <h2 class="analytics-main__way">Главная <span class="way__span">/ Аналитика</span></h2>
                 <h3 class="analytics-main__request">Вы спросили: <span class="request__span">«Путешествия»</span></h3>
-                <p class="analytics-main__text analytics-main__text-week">Новостей за неделю: <span class="text__span">34 324</span></p>
-                <p class="analytics-main__text analytics-main__text-mentions">Упоминаний в загаловках: <span class="text__span">235</span></p>
+                <p class="analytics-main__text analytics-main__text-week">Новостей за неделю: <span class="text__span" id='week'>Загрузка...</span></p>
+                <p class="analytics-main__text analytics-main__text-mentions">Упоминаний в заголовках: <span class="text__span" id='title'>Загрузка...</span></p>
             </section>
-            <section class="analytics-detail">
+            <section class="analytics-detail" style="display: none;">
                 <h2 class="analytics-detail__titel">Аналитика по дням</h2>
                 <div class="analytics-detail__graph">
                     <div class="analytics-detail__graph-main">
                         <div class="graph-main__text">
-                            <h2 class="graph-main__date">Дата <hr><span class="date__month">(Август)</span></h2>
+                            <h2 class="graph-main__date">Дата <br><span class="date__month">(Август)</span></h2>
                             <h2 class="graph-main__amount">Кол-во упоминаний</h2>
                         </div>
                         <div class="graph-main__separator"></div>
@@ -46,43 +46,43 @@
                     <div class="analytics-detail__graph-detail">
                         <div class="graph-detail__lines">
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="monday">19, пн</p>
+                                <p class="graph-detail__date" name="today7">19, пн</p>
                                 <div class="graph-detail__bar" id="monday__bar">
                                     <p class="graph-detail__cunter" id="monday__counter">15</p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="tuesday">20, вт</p>
+                                <p class="graph-detail__date" name="today6">20, вт</p>
                                 <div class="graph-detail__bar" id="tuesday__bar">
                                     <p class="graph-detail__cunter" id="tuesday__counter">18</p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="wednesday">21, ср</p>
+                                <p class="graph-detail__date" name="today5">21, ср</p>
                                 <div class="graph-detail__bar" id="wednesday__bar">
                                     <p class="graph-detail__cunter" id="wednesday__counter">11</p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="thursday">22, чт</p>
+                                <p class="graph-detail__date" name="today4">22, чт</p>
                                 <div class="graph-detail__bar" id="thursday__bar">
                                     <p class="graph-detail__cunter" id="thursday__counter">39</p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="friday">23, пт</p>
+                                <p class="graph-detail__date" name="today3">23, пт</p>
                                 <div class="graph-detail__bar" id="friday__bar">
                                     <p class="graph-detail__cunter" id="friday__counter">45</p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="saturday">24, сб</p>
+                                <p class="graph-detail__date" name="today2">24, сб</p>
                                 <div class="graph-detail__bar" id="saturday__bar">
                                     <p class="graph-detail__cunter" id="saturday__counter">73</p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="sunday">25, вс</p>
+                                <p class="graph-detail__date" name="today1">25, вс</p>
                                 <div class="graph-detail__bar" id="sunday__bar">
                                     <p class="graph-detail__cunter" id="sunday__counter">34</p>
                                 </div>
@@ -98,12 +98,20 @@
                     </div>
                 </div>
             </section>
+            <section class="searching" style="display: none;">
+                <i class="searching__preloader"></i>
+                <h2 class="searching__title">Загрузка...</h2>
+            </section>
+            <section class="error" style="display: none;">
+                <img class="error__image" src="/NewsAnalyzer/./images/not-found_v1.png" alt="Ошибка Сервера">
+                    <h3 class="error__titel">Нет доступа к серверу. Повторите позже.</h3>
+            </section>
             <section class="footer">
                 <div class="footer__text">
                     <p class="footer__copyright">&copy; 2020 Егор Бамбуров</p>
                     <div class="footer__links">
-                        <a class="footer__link" href="index.html" target="_blank">Главна<hr class="line__separator">я</a>
-                        <a class="footer__link" href="about.html" target="_blank">О <hr class="line__separator">проекте</a>
+                        <a class="footer__link" href="../index.html" target="_blank">Главна<hr class="line__separator">я</a>
+                        <a class="footer__link" href="../about/about.html" target="_blank">О <hr class="line__separator">проекте</a>
                         <a class="footer__link" href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практику<hr class="line__separator">м</a>
                     </div>
                 </div>
@@ -113,6 +121,6 @@
                 </div>
             </section>
         </div>
-        <script type="module" src="/NewsAnalyzer/./analytics/analytics.737a83e9b3777b7f9624.js"></script>
+        <script type="module" src="/NewsAnalyzer/./analytics/analytics.139b2fe45c17f4adff24.js"></script>
     </body>
 </html>
