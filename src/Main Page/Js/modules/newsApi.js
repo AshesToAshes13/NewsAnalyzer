@@ -1,4 +1,4 @@
-export class Api { 
+export class NewsApi { 
 
     constructor(baseUrl, apiKey, todayDate, startDate, request) {
         this.baseUrl = baseUrl;
@@ -12,6 +12,7 @@ export class Api {
         const url = this.baseUrl + this.startDate + this.todayDate + this.request + this.apiKey;
         const res = await fetch(url);
         if (res.ok) {
+            
             return res.json()
         }
         return Promise.reject(res.status)

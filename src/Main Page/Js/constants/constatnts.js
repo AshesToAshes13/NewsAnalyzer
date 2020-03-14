@@ -9,6 +9,8 @@ const success = document.querySelector('.search__status-success');
 const searchForm = document.forms.search;
 const analiticsLink = document.querySelector('.text__link');
 const defaultLink = analiticsLink.href;
+const requestField = document.querySelector('.search__request');
+const cardList = document.querySelectorAll('.search__status-success__card');
 
 
-export {baseUrl, apiKey, newsList, showMoreBtn, searching, nothing, error, success, searchForm, analiticsLink, defaultLink}
+export {baseUrl, apiKey, newsList, showMoreBtn, searching, nothing, error, success, searchForm, analiticsLink, defaultLink, requestField, cardList}

@@ -1,6 +1,5 @@
 export class Analytics {
-    constructor(apiClass, mentionsInTitle, newsWeek, request, dateHolder, weekArr, monthTitle, success, error, searching) {
-        this.apiClass = apiClass;
+    constructor( mentionsInTitle, newsWeek, request, dateHolder, weekArr, monthTitle, success, error, searching) {
         this.mentionsInTitle = mentionsInTitle;
         this.newsWeek = newsWeek;
         this.request = request;
@@ -20,29 +19,21 @@ export class Analytics {
         const dateArr = [];
         const word = this.request.replace(this.request[this.request.length -1], '');
         const regexp = new RegExp(word);
-        this.apiClass.fetchNews()
-            .then((res)=> {
-                
-                this.success.removeAttribute('style');
-                this.newsWeek.textContent = res.totalResults;
-                res.articles.forEach(post => {
-                    const result = post.title.match(regexp);
-                    if (result) {
-                        arr.push('1');
-                        const moment = require("moment");
-                        dateArr.push(moment(post.publishedAt).format('DD'))
-                    }
-                    
-                });
-                this.setUpMentionsArray(dateArr);
-                this.mentionsInTitle.textContent = arr.length;
-            })
-            .catch((err) => {
-                this.error.removeAttribute('style');
-            })
-            .finally(()=> {
-                this.searching.setAttribute('style', "display: none");
-            })
+        const news = JSON.parse(localStorage.news);
+
+        this.success.removeAttribute('style');
+        this.newsWeek.textContent = news.news.length;
+            
+        for (const num in news.news) {
+            const result = news.news[num].title.match(regexp);
+            if (result) {
+                arr.push('1');
+                const moment = require("moment");
+                dateArr.push(moment(news.news[num].publishedAt).format('DD'))
+            }
+        }
+        this.setUpMentionsArray(dateArr);
+        this.mentionsInTitle.textContent = arr.length;
             
     }
 

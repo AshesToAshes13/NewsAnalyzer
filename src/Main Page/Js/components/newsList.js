@@ -10,6 +10,7 @@ export class NewsList {
         this.error = error;
         this.searching = searching;
         this.showMoreBtn = showMoreBtn;
+        
     }
 
     setUpCards() {
@@ -18,14 +19,22 @@ export class NewsList {
             if (res.articles.length === 0) {
                 this.nothing.removeAttribute('style');
             } else {
+                localStorage.news = JSON.stringify({news: res.articles})
                 res.articles.forEach(post => {
-                this.newsCard.setUpCard(post.urlToImage, post.publishedAt, post.title, post.description, post.author, post.url)
+                    this.newsCard.setUpCard(post.urlToImage, post.publishedAt, post.title, post.description, post.source.name, post.url)
                 });
-                this.newsList.id = +this.newsList.id + 3
-                $('.search__status-success__card').slice(0, 3).show();
+                
+                const cardList = document.querySelectorAll('.search__status-success__card');
+
+                cardList[0].removeAttribute('style')
+                cardList[1].removeAttribute('style')
+                cardList[2].removeAttribute('style')
+            
+                this.newsList.id = 3;
+                
                 this.success.removeAttribute('style');
             }
-            
+            localStorage.setItem('newsLocal', res.articles);
         })
         .catch((err)=> {
             console.log(err)
@@ -34,13 +43,5 @@ export class NewsList {
         .finally (()=> {
             this.searching.setAttribute('style', "display: none");
         }) 
-    }  
-    
-    setUpshowMoreBtn() {
-        if ($('.search__status-success__card:hidden').length == 0) {
-            this.showMoreBtn.setAttribute('style', "display: none");
-        } else {
-            this.showMoreBtn.removeAttribute('style');
-        }
     }
 }
