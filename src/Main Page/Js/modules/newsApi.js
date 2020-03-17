@@ -1,16 +1,16 @@
 export class NewsApi { 
 
     constructor(baseUrl, apiKey, todayDate, startDate, request) {
-        this.baseUrl = baseUrl;
-        this.apiKey = apiKey;
-        this.todayDate = `to=${todayDate}&`;
-        this.startDate =`from=${startDate}&`;
-        this.request = `q=${request}&`;
+        this._baseUrl = baseUrl;
+        this._apiKey = apiKey;
+        this._todayDate = `to=${todayDate}&`;
+        this._startDate =`from=${startDate}&`;
+        this._request = `q=${request}&`;
     }
 
     async fetchNews() {
-        const url = this.baseUrl + this.startDate + this.todayDate + this.request + this.apiKey;
-        const res = await fetch(url);
+        const _url = this._baseUrl + this._startDate + this._todayDate + this._request + this._apiKey;
+        const res = await fetch(_url);
         if (res.ok) {
             
             return res.json()

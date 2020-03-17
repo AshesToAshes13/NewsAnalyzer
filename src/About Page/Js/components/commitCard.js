@@ -2,41 +2,40 @@ export class CommitCard {
     constructor(commitList) {
         this.commitList = commitList;
     }
-    setUpCommit(avatar, userName, email, date, message) {
+    setUpCommit() {
         const githubCommit = document.createElement('div');
-        const commitDate = document.createElement('h2');
-        const commitUser = document.createElement('div');
-        const userAvatar = document.createElement('img');
-        const userData = document.createElement('div');
-        const username = document.createElement('h3');
-        const userEmail = document.createElement('p');
-        const commitMessage = document.createElement('p')
+        const _commitDate = document.createElement('h2');
+        const _commitUser = document.createElement('div');
+        const _userAvatar = document.createElement('img');
+        const _userData = document.createElement('div');
+        const _username = document.createElement('h3');
+        const _userEmail = document.createElement('p');
+        const _commitMessage = document.createElement('p')
 
         githubCommit.classList.add('github__commit');
-        commitDate.classList.add('commit__date');
-        commitUser.classList.add('commit__user');
-        userAvatar.classList.add('user__avatar');
-        userData.classList.add('user__data');
-        username.classList.add('user__name');
-        userEmail.classList.add('user__email');
-        commitMessage.classList.add('commit__coment');
+        _commitDate.classList.add('commit__date');
+        _commitUser.classList.add('commit__user');
+        _userAvatar.classList.add('user__avatar');
+        _userData.classList.add('user__data');
+        _username.classList.add('user__name');
+        _userEmail.classList.add('user__email');
+        _commitMessage.classList.add('commit__coment');
 
-        githubCommit.appendChild(commitDate);
-        githubCommit.appendChild(commitUser);
-        commitUser.appendChild(userAvatar);
-        commitUser.appendChild(userData);
-        userData.appendChild(username);
-        userData.appendChild(userEmail);
-        githubCommit.appendChild(commitMessage);
-        this.commitList.appendChild(githubCommit);
+        githubCommit.appendChild(_commitDate);
+        githubCommit.appendChild(_commitUser);
+        _commitUser.appendChild(_userAvatar);
+        _commitUser.appendChild(_userData);
+        _userData.appendChild(_username);
+        _userData.appendChild(_userEmail);
+        githubCommit.appendChild(_commitMessage);
 
-        commitDate.textContent = date;
-        userAvatar.src = avatar;
-        username.textContent = userName;
-        userEmail.textContent = email;
-        commitMessage.textContent = message;
+        /*_commitDate.textContent = date;
+        _userAvatar.src = avatar;
+        _username.textContent = userName;
+        _userEmail.textContent = email;
+        _commitMessage.textContent = message;*/
 
-
+        return githubCommit
 
     }
 }

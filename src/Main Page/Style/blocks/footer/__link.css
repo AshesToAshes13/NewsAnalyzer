@@ -23,13 +23,6 @@
     height: 0px;
 }
 
-.footer__link:first-of-type {
-    padding-left: 270px;
-}
-
-.footer__link:last-of-type {
-    margin-right: 0px;
-}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .footer__link {
@@ -39,16 +32,9 @@
         margin-bottom: 40px;
         text-align: left;
     }
-    .footer__link:first-of-type {
-        padding-left: 0px;
-    }
 
     .line__separator {
         display: none;
-    }
-
-    .footer__link:last-of-type {
-        margin-bottom: 0px;
     }
 }
 
@@ -58,11 +44,4 @@
         margin-bottom: 0px;
         margin-right: 25px;
     }   
-
-    .footer__link:first-of-type {
-        padding-left: 50px;
-    }
-    .footer__link:last-of-type {
-        margin-right: 0px;
-    }
 }

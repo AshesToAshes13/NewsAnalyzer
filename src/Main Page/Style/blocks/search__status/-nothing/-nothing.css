@@ -8,7 +8,7 @@
     max-width: 356px;
     padding-top: 86px;
     padding-bottom: 80px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
