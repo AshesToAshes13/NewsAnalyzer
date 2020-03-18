@@ -25,18 +25,8 @@ export class NewsCard {
         newsCard.appendChild(_newsPublisher);
         newsCard.setAttribute('style' , 'display:none')
         
-        
-        /*const _moment = require("moment")
-        _moment.lang('ru')
-        const formatedDate= _moment(date).format('D MMMM, YYYY');*/
-        
-        //_newsDate.textContent = formatedDate;
-       // _newsImage.src = image;
-       //_newsImage.alt = 'Изображение не найдено'
-       // _newsTitle.textContent = titel;
-        //_newsText.textContent = text;
-       // _newsPublisher.textContent = publisher;
-        //newsCard.href = webLink ;
+       _newsImage.alt = 'Изображение не найдено'
+       
         newsCard.target = '_blank';
         return newsCard
     }

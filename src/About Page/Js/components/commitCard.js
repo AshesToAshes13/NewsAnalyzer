@@ -29,12 +29,6 @@ export class CommitCard {
         _userData.appendChild(_userEmail);
         githubCommit.appendChild(_commitMessage);
 
-        /*_commitDate.textContent = date;
-        _userAvatar.src = avatar;
-        _username.textContent = userName;
-        _userEmail.textContent = email;
-        _commitMessage.textContent = message;*/
-
         return githubCommit
 
     }
