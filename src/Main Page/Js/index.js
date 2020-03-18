@@ -48,47 +48,49 @@ function inputHendler(event) {
 
     if (request.value == 0){
 
-        disabledBtn();
+        
         return false
 
     } else {
 
         const field = search.elements.request;
         field.removeAttribute('style')
+        field.placeholder = 'Введите тему новости'
 
     }
 }
 
-function disabledBtn() {
+function chanteInputField() {
 
     const field = search.elements.request;
     field.setAttribute('style', 'border : 1px solid red')
     field.placeholder = 'Обязательное поле'
     field.color = 'red'
-
 }
 
 
-constants.searchForm.addEventListener('submit', (event)=> {
-
-    event.preventDefault();
+function starSearch() {
 
     const request = event.currentTarget.elements.request;
     
     if (request.value == 0) {
 
-        disabledBtn()
+        chanteInputField()
 
     } else {
-
         constants.newsList.id = 0;
         while (constants.newsList.firstChild) {
             constants.newsList.removeChild(constants.newsList.firstChild)
         }
+        const formRequest = document.querySelector('.search__request');
+        const formBtn = document.querySelector('.search__button');
+        formRequest.readOnly = true
+        formBtn.disabled = true;
         constants.searching.removeAttribute('style');
         constants.success.setAttribute('style', 'display: none');
         constants.nothing.setAttribute('style', 'display: none');
         constants.error.setAttribute('style', 'display: none');
+        localStorage.news = JSON.stringify({news: ''})
         localStorage.request = JSON.stringify({request: request.value});
 
         const apiClass = new NewsApi(constants.baseUrl, constants.apiKey, dateElements.todayDate, dateElements.startDate, request.value);
@@ -98,13 +100,22 @@ constants.searchForm.addEventListener('submit', (event)=> {
         newsListClass.setUpCards();
         constants.showMoreBtn.removeAttribute('style');
 
-    }     
+    } 
+}
+
+
+constants.searchForm.addEventListener('submit', (event)=> {
+
+    event.preventDefault();
+
+    starSearch()     
     
 })
 
 constants.searchForm.addEventListener('input', ()=> {
 
     inputHendler(event);
+    
 
 })
 
@@ -116,7 +127,6 @@ constants.showMoreBtn.addEventListener('click' , () => {
 })
 
 localStorageClass.setUpNews()
-localStorageClass.setUpRequest()
 
 
 

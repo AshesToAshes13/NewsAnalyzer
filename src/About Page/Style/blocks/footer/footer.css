@@ -3,6 +3,7 @@
 @import url('../footer/__link.css');
 @import url('../footer/__link-social.css');
 @import url('../footer/__text.css');
+@import url('../footer/__navigation.css');
 
 .footer {
     padding-top: 30px;

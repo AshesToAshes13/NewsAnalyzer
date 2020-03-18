@@ -6,7 +6,7 @@ import * as constants from './constants/constnants.js';
 
 const apiClass = new GithubApi(constants.baseUrl);
 const commitCardClass = new CommitCard(constants.commitsList);
-const commitsListClass = new CommitsList(apiClass, commitCardClass, constants.searching, constants.success, constants.error); 
+const commitsListClass = new CommitsList(apiClass, commitCardClass, constants.searching, constants.success, constants.error, constants.commitsList); 
 
 constants.searching.removeAttribute('style');
 commitsListClass.setUpcommits();

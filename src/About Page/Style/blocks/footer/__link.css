@@ -12,9 +12,7 @@
     transition: 0.4s ease-in-out;
 }
 
-.footer__link:last-of-type {
-    padding-right: 0px;
-}
+
 
 .footer__link:hover {
     opacity: 0.6;
@@ -26,9 +24,7 @@
     border: none;
 }
 
-.footer__link:first-of-type {
-    padding-left: 240px;
-}
+
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .footer__link {
@@ -42,15 +38,10 @@
     .line__separator {
         display: none;
     }
-    .footer__link:last-of-type {
-        padding-bottom: 40px;
-    }
+    
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-    .footer__link:first-of-type {
-        padding-left: 60px;
-    }
     .footer__link {
         padding-right: 25px;
     }

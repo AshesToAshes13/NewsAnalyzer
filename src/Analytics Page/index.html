@@ -11,14 +11,15 @@
         <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
     </head>
     <body>
-        <div class="page">
-            <section class="header">
+        <main class="page">
+            <header class="header">
                 <h1 class="header__titel">NewsAnalyzer</h1>
-                <div class="header__links">
-                    <a class="header__link" href="../index.html" target="_blank">Главная</a>
-                    <a class="header__link" href="../about/about.html" target="_blank">О проекте</a>
-                </div>
-            </section>
+                <nav class="header__links">
+                    <a class="header__link" href="../index.html">Главная</a>
+                    <a class="header__link" href="../about/about.html">О проекте</a>
+                </nav>
+            </header>
+            
             <section class="separator"></section>
             <section class="analytics-main">
                 <h2 class="analytics-main__way">Главная <span class="way__span">/ Аналитика</span></h2>
@@ -46,45 +47,45 @@
                     <div class="analytics-detail__graph-detail">
                         <div class="graph-detail__lines">
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="today7">19, пн</p>
+                                <p class="graph-detail__date" name="today7"></p>
                                 <div class="graph-detail__bar" id="monday__bar">
-                                    <p class="graph-detail__cunter" id="monday__counter">15</p>
+                                    <p class="graph-detail__cunter" id="monday__counter"></p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="today6">20, вт</p>
+                                <p class="graph-detail__date" name="today6"></p>
                                 <div class="graph-detail__bar" id="tuesday__bar">
-                                    <p class="graph-detail__cunter" id="tuesday__counter">18</p>
+                                    <p class="graph-detail__cunter" id="tuesday__counter"></p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="today5">21, ср</p>
+                                <p class="graph-detail__date" name="today5"></p>
                                 <div class="graph-detail__bar" id="wednesday__bar">
-                                    <p class="graph-detail__cunter" id="wednesday__counter">11</p>
+                                    <p class="graph-detail__cunter" id="wednesday__counter"></p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="today4">22, чт</p>
+                                <p class="graph-detail__date" name="today4"></p>
                                 <div class="graph-detail__bar" id="thursday__bar">
-                                    <p class="graph-detail__cunter" id="thursday__counter">39</p>
+                                    <p class="graph-detail__cunter" id="thursday__counter"></p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="today3">23, пт</p>
+                                <p class="graph-detail__date" name="today3"></p>
                                 <div class="graph-detail__bar" id="friday__bar">
-                                    <p class="graph-detail__cunter" id="friday__counter">45</p>
+                                    <p class="graph-detail__cunter" id="friday__counter"></p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="today2">24, сб</p>
+                                <p class="graph-detail__date" name="today2"></p>
                                 <div class="graph-detail__bar" id="saturday__bar">
-                                    <p class="graph-detail__cunter" id="saturday__counter">73</p>
+                                    <p class="graph-detail__cunter" id="saturday__counter"></p>
                                 </div>
                             </div>
                             <div class="graph-detail__line">
-                                <p class="graph-detail__date" name="today1">25, вс</p>
+                                <p class="graph-detail__date" name="today1"></p>
                                 <div class="graph-detail__bar" id="sunday__bar">
-                                    <p class="graph-detail__cunter" id="sunday__counter">34</p>
+                                    <p class="graph-detail__cunter" id="sunday__counter"></p>
                                 </div>
                             </div>
                         </div>
@@ -98,29 +99,27 @@
                     </div>
                 </div>
             </section>
-            <section class="searching" style="display: none;">
-                <i class="searching__preloader"></i>
-                <h2 class="searching__title">Загрузка...</h2>
-            </section>
-            <section class="error" style="display: none;">
-                <img class="error__image" src="<%=require('../Images/not-found_v1.png').default%>" alt="Ошибка Сервера">
-                    <h3 class="error__titel">Нет доступа к серверу. Повторите позже.</h3>
-            </section>
-            <section class="footer">
+            <footer class="footer">
                 <div class="footer__text">
                     <p class="footer__copyright">&copy; 2020 Егор Бамбуров</p>
                     <div class="footer__links">
-                        <a class="footer__link" href="../index.html" target="_blank">Главна<hr class="line__separator">я</a>
-                        <a class="footer__link" href="../about/about.html" target="_blank">О <hr class="line__separator">проекте</a>
+                        <nav class="footer__navigation">
+                            <a class="footer__link" href="../index.html">Главна<hr class="line__separator">я</a>
+                            <a class="footer__link" href="../about/about.html">О <hr class="line__separator">проекте</a>
+                        </nav>
                         <a class="footer__link" href="https://praktikum.yandex.ru" target="_blank">Яндекс.Практику<hr class="line__separator">м</a>
                     </div>
                 </div>
                 <div class="footer__links-social">
-                    <a class="footer__link-social" href="https://github.com/AshesToAshes13/NewsAnalyzer" target="_blank"><img src="<%=require('../Images/github.png').default%>" alt="Логитип GitHub"></a>
-                    <a class="footer__link-social" href="https://ru-ru.facebook.com/" target="_blank"><img src="<%=require('../Images/facebook.png').default%>" alt="Логитип FaceBook"></a>
+                    <a class="footer__link-social" href="https://github.com/AshesToAshes13/NewsAnalyzer" target="_blank"><picture>
+                        <img src="<%=require('../Images/github.png').default%>" alt="Логитип GitHub">
+                    </picture></a>
+                    <a class="footer__link-social" href="https://ru-ru.facebook.com/" target="_blank"><picture>
+                        <img src="<%=require('../Images/facebook.png').default%>" alt="Логитип FaceBook">
+                    </picture></a>
                 </div>
-            </section>
-        </div>
+            </footer>
+        </main>    
         <script type="module" src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
     </body>
 </html>

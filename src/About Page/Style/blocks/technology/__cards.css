@@ -12,11 +12,15 @@
         padding-bottom: 32px;
         grid-template-columns: repeat(2, 120px);
         grid-gap: 32px;
+        width: 288px;
+        margin: 0 auto;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
     .technology__cards {
+        width: 672px;
+        margin: 0 auto;
         padding-top: 0px;
         padding-bottom: 40px;
         grid-gap: 64px;

@@ -1,11 +1,11 @@
 export class GithubApi {
 
     constructor(baseUrl) {
-        this.baseUrl = baseUrl;
+        this._baseUrl = baseUrl;
     }
 
     async fetchCommits() {
-        const res = await fetch(this.baseUrl)
+        const res = await fetch(this._baseUrl)
         if (res.ok) {
             return res.json()
         }

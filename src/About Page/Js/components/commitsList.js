@@ -1,40 +1,65 @@
+import { _ } from "core-js";
+
 export class CommitsList {
 
-    constructor(apiClass, commitCardClass, searching, success, error) {
-        this.apiClass = apiClass;
-        this.commitCardClass = commitCardClass;
-        this.searching = searching;
-        this.success = success;
-        this.error = error;
+    constructor(apiClass, commitCardClass, searching, success, error, commitList) {
+        this._apiClass = apiClass;
+        this._commitCardClass = commitCardClass;
+        this._searching = searching;
+        this._success = success;
+        this._error = error;
+        this._commitList = commitList;
     }
 
     setUpcommits() {
-        this.apiClass.fetchCommits()
-            .then((res) => {
-                res.forEach(commit => {
-                    this.success.removeAttribute('style');
-                    const avatar = commit.author.avatar_url;
-                    const userName = commit.commit.committer.name;
-                    const email = commit.commit.committer.email;
-                    const date = commit.commit.committer.date;
-                    const message = commit.commit.message;
-                    const moment = require("moment")
-                    moment.lang('ru')
-                    const formatedDate= moment(date).format('D MMMM, YYYY');
-                    this.commitCardClass.setUpCommit(avatar, userName, email, formatedDate, message)
+        this._apiClass.fetchCommits()
+            .then((_res) => {
+                _res.forEach(_post => {
+                    this._success.removeAttribute('style');
+                    const _card = this._commitCardClass.setUpCommit()
+                    this._commitList.appendChild(_card)
                 })
-                this.setUpSlider();
+                const _commits = document.querySelectorAll('.github__commit');
+                if (_commits.length == _res.length) {
+                    for (const _num in _commits) {
+                        if (_commits[_num].children != undefined) {
+                            
+                            const _commitDate = _commits[_num].children[0];
+                            const _commitAvatar = _commits[_num].children[1].children[0];
+                            const _commitUsername = _commits[_num].children[1].children[1].children[0];
+                            const _commitUserEmail = _commits[_num].children[1].children[1].children[1];
+                            const _commitText = _commits[_num].children[2];
+
+                            const _date = _res[_num].commit.committer.date;
+                            const _avatar = _res[_num].author.avatar_url;
+                            const _username = _res[_num].commit.committer.name;
+                            const _email = _res[_num].commit.committer.email;
+                            const _text = _res[_num].commit.message;
+
+                            const _moment = require("moment")
+                            _moment.locale('ru')
+                            const _formatedDate = _moment(_date).format('D MMMM, YYYY');
+
+                            _commitDate.textContent = _formatedDate;
+                            _commitAvatar.src = _avatar;
+                            _commitUsername.textContent = _username;
+                            _commitUserEmail.textContent = _email;
+                            _commitText.textContent = _text;
+                        }
+                    }
+                }
+                this._setUpSlider();
             })
             .catch((err) => {
                 console.log(err)
-                this.error.removeAttribute('style');
+                this._error.removeAttribute('style');
             })
             .finally(()=>{
-                this.searching.setAttribute('style', "display: none");
+                this._searching.setAttribute('style', "display: none");
             });
     }
 
-    setUpSlider() {
+    _setUpSlider() {
         $('.github__list').slick({
             slidesToShow: 3,
             slidesToScroll: 3,
